@@ -8,7 +8,9 @@
   <title>Home</title>
   <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
-  
+
+
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
@@ -16,15 +18,64 @@ div.scroll-container {
   background: linear-gradient(to bottom, #353C98 30%, #283D99 100%);
   overflow: auto;
   white-space: nowrap;
-  padding: 10px;
+  padding: 5px;
 }
 
 div.scroll-container img {
   padding: 10px;
 }
+body {
+  font-family:arial rounded MT;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #644b6a;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
 
 body {
 background: url("bg.jpg");
+}
 }
 
 {
@@ -58,7 +109,7 @@ color: white;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  font-family: Verdana, sans-serif;
+  font-family:arial rounded MT;
   margin: 0;
 }
 
@@ -170,7 +221,9 @@ body {
 }
 
 img {
-  margin-bottom: 10px;
+  width: 50%;
+  height: auto;
+  margin-bottom: 0px;
 }
 
 .caption-container {
@@ -211,64 +264,84 @@ img.hover-shadow {
   content: "";
   clear: both;
   display: table;
+
 </style>
 
 </head>
-
 <body>
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="gardenasada.github.io">Home</a>
+  <a href="https://www.youtube.com/@GardenAsada">Channel</a>
+  <a href="tabs/show.html">Show</a>
+  <a href="tabs/comm.html">Comm Info</a>
+<a href="tabs/aboutme.html">About</a>
+  <a href="https://www.patreon.com/c/GardenAsada">Support</a>
+</div>
+
+
+<div id="main">
+  <span style="font-size:35px;cursor:pointer; color:white" onclick="openNav()">&#9776; </span>
+</div>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+
+<body>
+ 
 <center>
 
-<div class="row">
-  <div class="column">
-<p><a href="https://www.youtube.com/@GardenAsada"><img align="top" img src="gardenlogo.png" alt="gardenasada" 
-   style="max-width:100%;height:auto;"> <left="90"></a></p>
-  </div>
-  <div class="column">
-<p><a href="aboutme.html"><img align="top" img src="about.png" alt="about" 
-   style="max-width:100%;height:auto;"> <left="90"></a></p>
-  </div>
-  <div class="column">
-<p><a href="https://www.patreon.com/cw/GardenAsada"><img align="top" img src="supportbutt.png" alt="support" 
-   style="max-width:100%;height:auto;"> <left="90"></a></p>
-  </div>
+<a href="index.html"><img align="top" img src="gardenlogo.png" alt="gardenasada" 
+   width="410" height="234" left="90"></a></p>
 </div>
 
 <b style="font-family:arial rounded MT"> The Forest Lies - Chapter #1 (11-page preview)</b>
   <br>
-<A style="font-family:arial rounded MT"> Dialogue susceptible to changes/edits</A>  
+<A style="font-family:arial rounded MT"> Susceptible to changes/edits</A>  
 
 <div class="scroll-container">
 
-    <img src="p1.png" style="width:20%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <img src="TFLs/p1.png" style="width:20%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 
-    <img src="p2.png" style="width:20%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <img src="TFLs/p2.png" style="width:20%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 
-    <img src="p3.png" style="width:20%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img src="TFLs/p3.png" style="width:20%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 
-    <img src="p4.png" style="width:20%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img src="TFLs/p4.png" style="width:20%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 
-    <img src="p5.png" style="width:20%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    <img src="TFLs/p5.png" style="width:20%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
   
-  <img src="p6.png" style="width:20%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+  <img src="TFLs/p6.png" style="width:20%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
   
-  <img src="p7.png" style="width:20%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+  <img src="TFLs/p7.png" style="width:20%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
   
-  <img src="p8.png" style="width:20%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+  <img src="TFLs/p8.png" style="width:20%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
   
-  <img src="p9.png" style="width:20%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  <img src="TFLs/p9.png" style="width:20%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
   
-  <img src="p10.png" style="width:20%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  <img src="TFLs/p10.png" style="width:20%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
   
-  <img src="p11.png" style="width:20%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+  <img src="TFLs/p11.png" style="width:20%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
 
 </div>
-
-<b style="font-family:arial rounded MT"> The Forest Lies - Chapter #2 </b>
 
 <div class="scroll-container">
 
 </div>
+
 
 </center>
 
@@ -281,60 +354,59 @@ img.hover-shadow {
 
     <div class="mySlides">
       <div class="numbertext">1 / 4</div>
-      <img src="p1.png" style="width:100%">
+      <img src="TFLs/p1.png" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      <img src="p2.png" style="width:100%">
+      <img src="TFLs/p2.png" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
-      <img src="p3.png" style="width:100%">
+      <img src="TFLs/p3.png" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      <img src="p4.png" style="width:100%">
+      <img src="TFLs/p4.png" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">5 / 4</div>
-      <img src="p5.png" style="width:100%">
+      <img src="TFLs/p5.png" style="width:100%">
     </div>
 
    <div class="mySlides">
       <div class="numbertext">6 / 4</div>
-      <img src="p6.png" style="width:100%">
+      <img src="TFLs/p6.png" style="width:100%">
     </div>
 
    <div class="mySlides">
       <div class="numbertext">7 / 4</div>
-      <img src="p7.png" style="width:100%">
+      <img src="TFLs/p7.png" style="width:100%">
     </div>
 
        <div class="mySlides">
       <div class="numbertext">8 / 4</div>
-      <img src="p8.png" style="width:100%">
+      <img src="TFLs/p8.png" style="width:100%">
     </div>
 
        <div class="mySlides">
       <div class="numbertext">9 / 4</div>
-      <img src="p9.png" style="width:100%">
+      <img src="TFLs/p9.png" style="width:100%">
     </div>
 
        <div class="mySlides">
       <div class="numbertext">10 / 4</div>
-      <img src="p10.png" style="width:100%">
+      <img src="TFLs/p10.png" style="width:100%">
     </div>
 
        <div class="mySlides">
       <div class="numbertext">11 / 4</div>
-      <img src="p11.png" style="width:100%">
+      <img src="TFLs/p11.png" style="width:100%">
     </div>
     
-
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -343,33 +415,32 @@ img.hover-shadow {
       <p id="caption"></p>
     </div>
 
+
 <div class="scroll-container">
 
     <div class="column">
-      <img class="demo cursor" src="p1.png" style="width:100%" onclick="currentSlide(1)" alt="Chp.1,P.1">
+      <img class="demo cursor" src="TFLs/p1.png" style="width:100%" onclick="currentSlide(1)" alt="Chp.1,P.1">
    
-      <img class="demo cursor" src="p2.png" style="width:100%" onclick="currentSlide(2)" alt="Chp.1,P.2">
+      <img class="demo cursor" src="TFLs/p2.png" style="width:100%" onclick="currentSlide(2)" alt="Chp.1,P.2">
 
-      <img class="demo cursor" src="p3.png" style="width:100%" onclick="currentSlide(3)" alt="Chp.1,P.3">
+      <img class="demo cursor" src="TFLs/p3.png" style="width:100%" onclick="currentSlide(3)" alt="Chp.1,P.3">
 
-      <img class="demo cursor" src="p4.png" style="width:100%" onclick="currentSlide(4)" alt="Chp.1,P.4">
+      <img class="demo cursor" src="TFLs/p4.png" style="width:100%" onclick="currentSlide(4)" alt="Chp.1,P.4">
 
-      <img class="demo cursor" src="p5.png" style="width:100%" onclick="currentSlide(5)" alt="Chp.1,P.5">
+      <img class="demo cursor" src="TFLs/p5.png" style="width:100%" onclick="currentSlide(5)" alt="Chp.1,P.5">
       
-            <img class="demo cursor" src="p6.png" style="width:100%" onclick="currentSlide(6)" alt="Chp.1,P.6">
+            <img class="demo cursor" src="TFLs/p6.png" style="width:100%" onclick="currentSlide(6)" alt="Chp.1,P.6">
 
-            <img class="demo cursor" src="p7.png" style="width:100%" onclick="currentSlide(7)" alt="Chp.1,P.7">
+            <img class="demo cursor" src="TFLs/p7.png" style="width:100%" onclick="currentSlide(7)" alt="Chp.1,P.7">
 
-            <img class="demo cursor" src="p8.png" style="width:100%" onclick="currentSlide(8)" alt="Chp.1,P.8">
+            <img class="demo cursor" src="TFLs/p8.png" style="width:100%" onclick="currentSlide(8)" alt="Chp.1,P.8">
 
-            <img class="demo cursor" src="p9.png" style="width:100%" onclick="currentSlide(9)" alt="Chp.1,P.9">
+            <img class="demo cursor" src="TFLs/p9.png" style="width:100%" onclick="currentSlide(9)" alt="Chp.1,P.9">
 
-            <img class="demo cursor" src="p10.png" style="width:100%" onclick="currentSlide(10)" alt="Chp.1,P.10">
+            <img class="demo cursor" src="TFLs/p10.png" style="width:100%" onclick="currentSlide(10)" alt="Chp.1,P.10">
 
-            <img class="demo cursor" src="p11.png" style="width:100%" onclick="currentSlide(11)" alt="Chp.1,P.11">
+            <img class="demo cursor" src="TFLs/p11.png" style="width:100%" onclick="currentSlide(11)" alt="Chp.1,P.11">
 
-
-      
 
     </div>
 </div>
@@ -417,11 +488,40 @@ function showSlides(n) {
 
 </html>
 
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
+
+<div>
+  <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>Animated Sidebar</h1>
+    <p>Click on the "hamburger menu" to slide in the side navigation.</p>
+    <p>W3.CSS provide the following animation classes if you want to experiment for yourself:</p>
+    <p>w3-animate-left, w3-animate-top, w3-animate-bottom, w3-animate-right, w3-animate-opacity, w3-animate-zoom</p>
+  </div>
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+     
 </body>
-
-</html>
-
-
-
-
+</html> 
 
